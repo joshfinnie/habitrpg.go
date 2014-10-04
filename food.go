@@ -8,21 +8,22 @@
 package habitrpg
 
 type Food struct {
-	Candy_Base            int
-	Candy_CottonCandyBlue int
-	Candy_CottonCandyPink int
-	Candy_Desert          int
-	Candy_Golden          int
-	Candy_Red             int
-	Candy_Shade           int
-	Candy_Skeleton        int
-	Candy_White           int
-	Candy_Zombie          int
-	Chocolate             int
-	CottonCandyBlue       int
-	CottonCandyPink       int
-	Fish                  int
-	Meat                  int
-	RottenMeat            int
-	Strawberry            int
+	CandyBase            float64 `json:"Candy_Base"`
+	CandyCottonCandyBlue float64 `json:"Candy_CottonCandyBlue"`
+	CandyCottonCandyPink float64 `json:"Candy_CottonCandyPink"`
+	CandyDesert          float64 `json:"Candy_Desert"`
+	CandyGolden          float64 `json:"Candy_Golden"`
+	CandyRed             float64 `json:"Candy_Red"`
+	CandyShade           float64 `json:"Candy_Shade"`
+	CandySkeleton        float64 `json:"Candy_Skeleton"`
+	CandyWhite           float64 `json:"Candy_White"`
+	CandyZombie          float64 `json:"Candy_Zombie"`
+	Chocolate            float64 `json:"Chocolate"`
+	CottonCandyBlue      float64 `json:"CottonCandyBlue"`
+	CottonCandyPink      float64 `json:"CottonCandyPink"`
+	Fish                 float64 `json:"Fish"`
+	Meat                 float64 `json:"Meat"`
+	RottenMeat           float64 `json:"RottenMeat"`
+	Strawberry           float64 `json:"Strawberry"`
+	// There should be more?
 }

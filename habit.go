@@ -12,24 +12,26 @@ import (
 )
 
 type Habit struct {
-	text        string
-	attribute   string
-	priority    int
-	value       int // really should be a float
-	note        string
-	dateCreated string
-	id          string
-	down        bool
-	up          bool
-	history     []struct {
-		value int // should be a float
-		date  int
-	}
-	habitType string `json:"type"`
+	Attribute   string   `json:"attribute"`
+	Challenge   struct{} `json:"challenge"`
+	DateCreated string   `json:"dateCreated"`
+	Down        bool     `json:"down"`
+	History     []struct {
+		Date  float64 `json:"date"`
+		Value float64 `json:"value"`
+	} `json:"history"`
+	ID       string   `json:"id"`
+	Notes    string   `json:"notes"`
+	Priority float64  `json:"priority"`
+	Tags     struct{} `json:"tags"`
+	Text     string   `json:"text"`
+	Type     string   `json:"type"`
+	Up       bool     `json:"up"`
+	Value    float64  `json:"value"`
 }
 
 // dateCreatedTime is a convenience wrapper that returns the dateCreated time,
 // parsed as a time.Time struct
 func (h Habit) dateCreatedTime() (time.Time, error) {
-	return time.Parse(time.RubyDate, h.dateCreated)
+	return time.Parse(time.RubyDate, h.DateCreated)
 }

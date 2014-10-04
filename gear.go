@@ -8,31 +8,35 @@
 package habitrpg
 
 type Gear struct {
-	costume struct {
-		shield string
-		head   string
-		armor  string
-		weapon string
-	}
-	equipped struct {
-		shield string
-		head   string
-		armor  string
-		weapon string
-	}
-	owned struct {
-		armor_warrior_1  bool
-		armor_wizard_1   bool
-		head_warrior_1   bool
-		head_wizard_1    bool
-		shield_warrior_1 bool
-		shield_warrior_2 bool
-		weapon_warrior_1 bool
-		weapon_warrior_2 bool
-		weapon_warrior_3 bool
-		weapon_warrior_4 bool
-		weapon_wizard_0  bool
-		weapon_wizard_1  bool
-		weapon_warrior_0 bool
-	}
+	Costume struct {
+		Armor  string `json:"armor"`
+		Head   string `json:"head"`
+		Shield string `json:"shield"`
+		Weapon string `json:"weapon"`
+	} `json:"costume"`
+	Equipped struct {
+		Armor  string `json:"armor"`
+		Head   string `json:"head"`
+		Shield string `json:"shield"`
+		Weapon string `json:"weapon"`
+	} `json:"equipped"`
+	Owned struct {
+		ArmorWarrior1  bool `json:"armor_warrior_1"`
+		ArmorWizard1   bool `json:"armor_wizard_1"`
+		HeadWarrior1   bool `json:"head_warrior_1"`
+		HeadWizard1    bool `json:"head_wizard_1"`
+		HeadWizard2    bool `json:"head_wizard_2"`
+		HeadWizard3    bool `json:"head_wizard_3"`
+		ShieldWarrior1 bool `json:"shield_warrior_1"`
+		ShieldWarrior2 bool `json:"shield_warrior_2"`
+		WeaponWarrior0 bool `json:"weapon_warrior_0"`
+		WeaponWarrior1 bool `json:"weapon_warrior_1"`
+		WeaponWarrior2 bool `json:"weapon_warrior_2"`
+		WeaponWarrior3 bool `json:"weapon_warrior_3"`
+		WeaponWarrior4 bool `json:"weapon_warrior_4"`
+		WeaponWizard0  bool `json:"weapon_wizard_0"`
+		WeaponWizard1  bool `json:"weapon_wizard_1"`
+		WeaponWizard2  bool `json:"weapon_wizard_2"`
+		// There should be more...
+	} `json:"owned"`
 }

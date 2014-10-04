@@ -1,37 +1,26 @@
-// Copyright 2014 Josh Finnie and contributors. All rights reserved.
-// Contributers can be found listed in the CONTRIBUTORS.txt document
-//
-// Use of this source code is governed by the MIT License license that can be
-// found in the LICENSE file or at http://www.joshfinnie.com/license.txt
-
-// This file contains the struct for HabitRPG's Task
 package habitrpg
 
-import (
-	"time"
-)
-
 type Task struct {
-	id          string
-	dateCreated string
-	text        string
-	notes       string
-	tags        interface{}
-	value       int
-	priority    int
-	attribute   string
-	challenge   *Challenge
-	down        bool
-	up          bool
-	history     []struct {
-		date  int
-		value int
-	}
-	taskType string `json:"type"`
+	Attribute   string    `json:"attribute"`
+	Challenge   Challenge `json:"challenge"`
+	DateCreated string    `json:"dateCreated"`
+	Down        bool      `json:"down"`
+	History     []struct {
+		Date  float64 `json:"date"`
+		Value float64 `json:"value"`
+	} `json:"history"`
+	ID       string      `json:"id"`
+	Notes    string      `json:"notes"`
+	Priority float64     `json:"priority"`
+	Tags     interface{} `json:"tags"`
+	Text     string      `json:"text"`
+	Type     string      `json:"type"`
+	Up       bool        `json:"up"`
+	Value    float64     `json:"value"`
 }
 
 // dateCreatedTime is a convenience wrapper that returns the dateCreated time,
 // parsed as a time.Time struct
 func (t Task) dateCreatedTime() (time.Time, error) {
-	return time.Parse(time.RubyDate, t.dateCreated)
+	return time.Parse(time.RubyDate, t.DateCreated)
 }

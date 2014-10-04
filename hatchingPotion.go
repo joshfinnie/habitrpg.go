@@ -8,13 +8,13 @@
 package habitrpg
 
 type HatchingPotion struct {
-	Base            int
-	CottonCandyPink int
-	Desert          int
-	Red             int
-	Shade           int
-	Skeleton        int
-	White           int
-	Zombie          int
-	// There are more...
+	Base            float64 `json:"Base"`
+	CottonCandyBlue float64 `json:"CottonCandyBlue"`
+	CottonCandyPink float64 `json:"CottonCandyPink"`
+	Desert          float64 `json:"Desert"`
+	Red             float64 `json:"Red"`
+	Shade           float64 `json:"Shade"`
+	Skeleton        float64 `json:"Skeleton"`
+	White           float64 `json:"White"`
+	Zombie          float64 `json:"Zombie"`
 }

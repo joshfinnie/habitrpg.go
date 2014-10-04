@@ -8,29 +8,30 @@
 package habitrpg
 
 type Preference struct {
-	automaticAllocation bool
-	costume             bool
-	language            string
-	timezoneOffset      int
-	toolbarCollapsed    bool
-	advancedCollapsed   bool
-	tagsCollapsed       bool
-	newTaskEdit         bool
-	disabledClasses     bool
-	stickyHeader        bool
-	sleep               bool
-	allocationMode      string
-	sound               string
-	shirt               string
-	skin                string
-	hideHeader          bool
-	hair                struct {
-		flower   int
-		mustache int
-		beard    int
-		bangs    int
-		color    string
-	}
-	size     string
-	dayStart int
+	AdvancedCollapsed   bool    `json:"advancedCollapsed"`
+	AllocationMode      string  `json:"allocationMode"`
+	AutomaticAllocation bool    `json:"automaticAllocation"`
+	Costume             bool    `json:"costume"`
+	DayStart            float64 `json:"dayStart"`
+	DisableClasses      bool    `json:"disableClasses"`
+	Hair                struct {
+		Bangs    float64 `json:"bangs"`
+		Base     float64 `json:"base"`
+		Beard    float64 `json:"beard"`
+		Color    string  `json:"color"`
+		Flower   float64 `json:"flower"`
+		Mustache float64 `json:"mustache"`
+	} `json:"hair"`
+	HideHeader       bool    `json:"hideHeader"`
+	Language         string  `json:"language"`
+	NewTaskEdit      bool    `json:"newTaskEdit"`
+	Shirt            string  `json:"shirt"`
+	Size             string  `json:"size"`
+	Skin             string  `json:"skin"`
+	Sleep            bool    `json:"sleep"`
+	Sound            string  `json:"sound"`
+	StickyHeader     bool    `json:"stickyHeader"`
+	TagsCollapsed    bool    `json:"tagsCollapsed"`
+	TimezoneOffset   float64 `json:"timezoneOffset"`
+	ToolbarCollapsed bool    `json:"toolbarCollapsed"`
 }

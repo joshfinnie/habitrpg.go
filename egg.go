@@ -8,13 +8,13 @@
 package habitrpg
 
 type Egg struct {
-	BearCub   int
-	Cactus    int
-	Dragon    int
-	FlyingPig int
-	Fox       int
-	LionCub   int
-	TigerCub  int
-	Wolf      int
+	BearCub   float64 `json:"BearCub"`
+	Cactus    float64 `json:"Cactus"`
+	Dragon    float64 `json:"Dragon"`
+	FlyingPig float64 `json:"FlyingPig"`
+	Fox       float64 `json:"Fox"`
+	LionCub   float64 `json:"LionCub"`
+	TigerCub  float64 `json:"TigerCub"`
+	Wolf      float64 `json:"Wolf"`
 	// There are more...
 }

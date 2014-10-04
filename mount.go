@@ -4,10 +4,10 @@
 // Use of this source code is governed by the MIT License license that can be
 // found in the LICENSE file or at http://www.joshfinnie.com/license.txt
 
-// This file contains the struct for HabitRPG's Pet
+// This file contains the struct for HabitRPG's Mount
 package habitrpg
 
-type Pet struct {
+type Mount struct {
 	BearCub_Base         float64 `json:"BearCub-Base"`
 	BearCub_Skeleton     float64 `json:"BearCub-Skeleton"`
 	Cactus_Desert        float64 `json:"Cactus-Desert"`

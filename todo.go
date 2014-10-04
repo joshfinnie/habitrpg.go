@@ -12,21 +12,23 @@ import (
 )
 
 type Todo struct {
-	text              string
-	attribute         string
-	priority          int
-	value             int
-	notes             string
-	dateCreated       string
-	id                string
-	checklist         []string
-	collapseChecklist bool
-	completed         bool
-	todoType          string `json:"type"`
+	Attribute         string        `json:"attribute"`
+	Challenge         Challenge     `json:"challenge"`
+	Checklist         []interface{} `json:"checklist"`
+	CollapseChecklist bool          `json:"collapseChecklist"`
+	Completed         bool          `json:"completed"`
+	DateCreated       string        `json:"dateCreated"`
+	ID                string        `json:"id"`
+	Notes             string        `json:"notes"`
+	Priority          float64       `json:"priority"`
+	Tags              struct{}      `json:"tags"`
+	Text              string        `json:"text"`
+	Type              string        `json:"type"`
+	Value             float64       `json:"value"`
 }
 
 // dateCreatedTime is a convenience wrapper that returns the dateCreated time,
 // parsed as a time.Time struct
 func (t Todo) dateCreatedTime() (time.Time, error) {
-	return time.Parse(time.RubyDate, t.dateCreated)
+	return time.Parse(time.RubyDate, t.DateCreated)
 }

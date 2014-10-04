@@ -8,20 +8,22 @@
 package habitrpg
 
 type Item struct {
-	currentPet string
-	lastDrop   struct {
-		count int
-		date  string
-	}
-	quests          interface{}
-	mounts          interface{}
-	food            Food
-	hatchingPotions HatchingPotion
-	eggs            Egg
-	pets            Pet
-	special         struct {
-		valentineReceived []string
-		snowball          int
-	}
-	gear Gear
+	CurrentMount    string         `json:"currentMount"`
+	CurrentPet      string         `json:"currentPet"`
+	Eggs            Egg            `json:"eggs"`
+	Food            Food           `json:"food"`
+	Gear            Gear           `json:"gear"`
+	HatchingPotions HatchingPotion `json:"hatchingPotions"`
+	LastDrop        struct {
+		Count float64 `json:"count"`
+		Date  string  `json:"date"`
+	} `json:"lastDrop"`
+	Mounts  Mount    `json:"mounts"`
+	Pets    Pet      `json:"pets"`
+	Quests  struct{} `json:"quests"`
+	Special struct {
+		Snowball          float64       `json:"snowball"`
+		SpookDust         float64       `json:"spookDust"`
+		ValentineReceived []interface{} `json:"valentineReceived"`
+	} `json:"special"`
 }
